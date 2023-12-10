@@ -1,12 +1,7 @@
-import { Grid, Heading, Kbd, Text, GridItem } from "@chakra-ui/react";
+import { Grid, Heading, Kbd, Button, GridItem } from "@chakra-ui/react";
 import React from "react";
 
 type Props = {};
-
-type PhoneKeys = {
-  text: string;
-  value: number;
-};
 
 const phoneKeysList: PhoneKeys[] = [
   { text: "1", value: 1 },
@@ -24,18 +19,17 @@ export default function Keyboard({}: Props) {
   return (
     <Grid gap={3} templateColumns="repeat(3, 0fr)">
       {phoneKeysList.map(({ text, value }, i) => (
-        <GridItem key={text}>
-          <Kbd
-            py={"2"}
-            width={"16"}
-            display={"inline-block"}
-            textAlign="center"
-          >
-            {value}
-            &nbsp;
-            {text}
-          </Kbd>
-        </GridItem>
+        <Button
+          key={text}
+          py={"2"}
+          width={"20"}
+          textAlign="center"
+          variant={"outline"}
+        >
+          <Heading as={"h5"}>{value}</Heading>
+          &nbsp;
+          {text}
+        </Button>
       ))}
     </Grid>
   );
