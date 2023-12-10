@@ -1,4 +1,4 @@
 type PhoneKeys = {
   text: string;
-  value: number;
+  value: number | string;
 };
