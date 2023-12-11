@@ -10,10 +10,7 @@ import {
   Grid,
   Heading,
   Spinner,
-  InputGroup,
-  InputLeftAddon,
   FormControl,
-  FormHelperText,
   FormLabel,
   ButtonGroup,
   Text,
@@ -147,12 +144,6 @@ export default function Phone() {
     setNumString((numString) => numString + value);
   }
 }
-
-type Result = {
-  wordList: string[];
-  isLoading: boolean;
-  text: string;
-};
 
 function Results({ wordList, text, isLoading = false }: Result) {
   return (
